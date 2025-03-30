@@ -1,2 +1,11 @@
-openpyxl
 pandas
+openpyxl
+fastapi
+python-dotenv
+pymupdf
+requests
+langchain-core
+langchain
+langchain-groq
+python-multipart
+typing-extensions
