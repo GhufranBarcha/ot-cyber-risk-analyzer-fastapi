@@ -1,17 +1,37 @@
 import io
 import os
 
+from dotenv import load_dotenv
 import pandas as pd
 import pymupdf
 
 from fastapi import FastAPI, File
+from fastapi.responses import JSONResponse
 from typing_extensions import Annotated
+
+from utils.utils import read_predefined_rules, get_security_description
+from llm import LLMParser
 
 
 
 app =  FastAPI(title = "OT Data Preprocessing API",
                description="Upload Asset Classification Excel and Vulnerability Scan PDF to get a preprocessed DataFrame.")
 
+load_dotenv()
+
+# Get individual keys
+API_KEY_1 = os.getenv("API_KEY_1")
+api_key_2 = os.getenv("API_KEY_2")
+API_KEY_3 = os.getenv("API_KEY_3")
+
+## Column Name which will be returned
+columns_name = ["CVE ID", "CVE Name", "Asset Name", "IP Address", "Vulnerability Severity", "Predefined Severity", "llm severity prediction"]
+
+# Create a list of API keys
+API_KEYS = [API_KEY_1, API_KEY_2, API_KEY_3]
+PATH_RULE = "/home/ghufranbarcha/Desktop/Freelance Task/CyberAI_Analysis/api/data/predefined roles.csv"
+
+llm = LLMParser(model_name = "deepseek-r1-distill-llama-70b", model_provider = "groq")
 
 def string_converter(text):
   clearned = text.replace("\n", " ")
@@ -59,6 +79,24 @@ def main(assetfile: Annotated[bytes, File(description = "An excel file with .xls
     ## Preprocssing of hosting
     merge_df["Hosting1"] = merge_df["Hosting"].apply(lambda x: "Isolated" if "Isolated" in x else "Anything")
     
-
     
-    return None  
+    merge_df["security_description"] = merge_df["CVE ID"].apply(lambda cve: get_security_description(cve, API_KEYS))
+    rule_str = read_predefined_rules(PATH_RULE)
+    
+    merge_df = llm.risk_analyzer(merge_df, rule_str)
+    merge_df = llm.refine_risk_level(merge_df)
+    
+    merge_df.to_csv("merge_df.csv")
+    
+    
+    merge_df = merge_df[columns_name]
+    
+
+    # Return the data as JSON
+    return JSONResponse(
+        content={
+            "status": "success",
+            "data": merge_df.to_dict(orient="records"),
+            "columns": columns_name
+        }
+    )
