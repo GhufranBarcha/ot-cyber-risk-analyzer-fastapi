@@ -149,8 +149,8 @@ def process_data(asset_df, scan_df):
     merged_df = llm.risk_analyzer(merged_df, rule_str)
     merged_df = llm.refine_risk_level(merged_df)
     
-    # Save intermediate result (consider making this optional or removing in production)
-    merged_df.to_csv("merge_df.csv")
+    # # Save intermediate result (consider making this optional or removing in production)
+    # merged_df.to_csv("merge_df.csv")
     
     # Select only the required columns
     return merged_df[RESULT_COLUMNS]
