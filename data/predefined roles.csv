@@ -1,0 +1,97 @@
+Asset Criticality,Safety Impact,Vulnerability Severity,Hosting,Risk Level
+Low,Low,Low,Not Isolated,Low
+Low,Medium,Low,Not Isolated,Low
+Low,High,Low,Not Isolated,Medium
+Low,Low,Medium,Not Isolated,Low
+Low,Medium,Medium,Not Isolated,Medium
+Low,High,Medium,Not Isolated,Medium
+Low,Low,High,Not Isolated,Low
+Low,Medium,High,Not Isolated,Medium
+Low,High,High,Not Isolated,Medium
+Low,Low,Critical,Not Isolated,Medium
+Low,Medium,Critical,Not Isolated,Medium
+Low,High,Critical,Not Isolated,High
+Medium,Low,Low,Not Isolated,Low
+Medium,Medium,Low,Not Isolated,Medium
+Medium,High,Low,Not Isolated,Medium
+Medium,Low,Medium,Not Isolated,Medium
+Medium,Medium,Medium,Not Isolated,Medium
+Medium,High,Medium,Not Isolated,High
+Medium,Low,High,Not Isolated,Medium
+Medium,Medium,High,Not Isolated,Medium
+Medium,High,High,Not Isolated,High
+Medium,Low,Critical,Not Isolated,Medium
+Medium,Medium,Critical,Not Isolated,High
+Medium,High,Critical,Not Isolated,High
+High,Low,Low,Not Isolated,Medium
+High,Medium,Low,Not Isolated,Medium
+High,High,Low,Not Isolated,High
+High,Low,Medium,Not Isolated,Medium
+High,Medium,Medium,Not Isolated,High
+High,High,Medium,Not Isolated,High
+High,Low,High,Not Isolated,Medium
+High,Medium,High,Not Isolated,High
+High,High,High,Not Isolated,Critical
+High,Low,Critical,Not Isolated,High
+High,Medium,Critical,Not Isolated,High
+High,High,Critical,Not Isolated,Critical
+Critical,Low,Low,Not Isolated,Medium
+Critical,Medium,Low,Not Isolated,High
+Critical,High,Low,Not Isolated,Critical
+Critical,Low,Medium,Not Isolated,High
+Critical,Medium,Medium,Not Isolated,High
+Critical,High,Medium,Not Isolated,Critical
+Critical,Low,High,Not Isolated,High
+Critical,Medium,High,Not Isolated,Critical
+Critical,High,High,Not Isolated,Critical
+Critical,Low,Critical,Not Isolated,High
+Critical,Medium,Critical,Not Isolated,Critical
+Critical,High,Critical,Not Isolated,Critical
+Low,Low,Low,Isolated,Isolated
+Low,Medium,Low,Isolated,Isolated
+Low,High,Low,Isolated,Isolated
+Low,Low,Medium,Isolated,Isolated
+Low,Medium,Medium,Isolated,Isolated
+Low,High,Medium,Isolated,Isolated
+Low,Low,High,Isolated,Isolated
+Low,Medium,High,Isolated,Isolated
+Low,High,High,Isolated,Isolated
+Low,Low,Critical,Isolated,Isolated
+Low,Medium,Critical,Isolated,Isolated
+Low,High,Critical,Isolated,Isolated
+Medium,Low,Low,Isolated,Isolated
+Medium,Medium,Low,Isolated,Isolated
+Medium,High,Low,Isolated,Isolated
+Medium,Low,Medium,Isolated,Isolated
+Medium,Medium,Medium,Isolated,Isolated
+Medium,High,Medium,Isolated,Isolated
+Medium,Low,High,Isolated,Isolated
+Medium,Medium,High,Isolated,Isolated
+Medium,High,High,Isolated,Isolated
+Medium,Low,Critical,Isolated,Isolated
+Medium,Medium,Critical,Isolated,Isolated
+Medium,High,Critical,Isolated,Isolated
+High,Low,Low,Isolated,Isolated
+High,Medium,Low,Isolated,Isolated
+High,High,Low,Isolated,Isolated
+High,Low,Medium,Isolated,Isolated
+High,Medium,Medium,Isolated,Isolated
+High,High,Medium,Isolated,Isolated
+High,Low,High,Isolated,Isolated
+High,Medium,High,Isolated,Isolated
+High,High,High,Isolated,Isolated
+High,Low,Critical,Isolated,Isolated
+High,Medium,Critical,Isolated,Isolated
+High,High,Critical,Isolated,Isolated
+Critical,Low,Low,Isolated,Isolated
+Critical,Medium,Low,Isolated,Isolated
+Critical,High,Low,Isolated,Isolated
+Critical,Low,Medium,Isolated,Isolated
+Critical,Medium,Medium,Isolated,Isolated
+Critical,High,Medium,Isolated,Isolated
+Critical,Low,High,Isolated,Isolated
+Critical,Medium,High,Isolated,Isolated
+Critical,High,High,Isolated,Isolated
+Critical,Low,Critical,Isolated,Isolated
+Critical,Medium,Critical,Isolated,Isolated
+Critical,High,Critical,Isolated,Isolated
