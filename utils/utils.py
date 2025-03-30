@@ -1,11 +1,9 @@
 import json
 import requests
-
 import pandas as pd
 
 
-
-def read_predefined_rules(path = "/home/ghufranbarcha/Desktop/Freelance Task/CyberAI_Analysis/api/data/predefined roles.csv"):
+def read_predefined_rules(path="/home/ghufranbarcha/Desktop/Freelance Task/CyberAI_Analysis/api/data/predefined roles.csv"):
     """Will read the predefined rule and create a formated string for LLM
 
     Args:
@@ -19,8 +17,6 @@ def read_predefined_rules(path = "/home/ghufranbarcha/Desktop/Freelance Task/Cyb
     data_list = df.to_dict(orient="records")
     json_str = ",\n".join(json.dumps(entry) for entry in data_list)
     return json_str
-    
-
 
 
 def get_security_description(cve_id, api_keys):
