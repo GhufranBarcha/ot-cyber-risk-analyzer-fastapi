@@ -1,5 +1,6 @@
 pandas
 openpyxl
+streamlit
 fastapi
 python-dotenv
 pymupdf
