@@ -33,15 +33,7 @@ BASE_DIR = Path(__file__).parent
 PATH_RULE = BASE_DIR / "data" / "predefined roles.csv"
 
 # Output columns
-RESULT_COLUMNS = [
-    "CVE ID", 
-    "CVE Name", 
-    "Asset Name", 
-    "IP Address", 
-    "Vulnerability Severity", 
-    "Predefined Severity", 
-    "llm severity prediction"
-]
+RESULT_COLUMNS = ["CVE ID", "CVE Name", "Asset Name", "IP Address", "Vulnerability Severity", "Predefined Severity", "risk_level", "llm_justification"]
 
 # Initialize LLM model
 llm = LLMParser(model_name="deepseek-r1-distill-llama-70b", model_provider="groq")
